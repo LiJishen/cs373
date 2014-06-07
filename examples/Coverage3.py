@@ -33,7 +33,7 @@ class UnitTests (TestCase) :
 main()
 
 """
-% coverage run --branch Coverage3.py
+% Coverage3.py
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 0.000s
@@ -42,8 +42,17 @@ OK
 
 
 
-% coverage report -m
+% coverage3 run --branch Coverage3.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+
+
+% coverage3 report -m
 Name        Stmts   Miss Branch BrMiss  Cover   Missing
 -------------------------------------------------------
-Coverage3      20      1      4      0    96%   33
+Coverage3      20      1      4      0    96%   35
 """

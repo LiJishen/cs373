@@ -27,7 +27,7 @@ class UnitTests (TestCase) :
 main()
 
 """
-% coverage help
+% coverage3 help
 Coverage.py, version 3.7.1
 Measure, collect, and report on code coverage in Python programs.
 
@@ -49,7 +49,7 @@ For more information, see http://nedbatchelder.com/code/coverage
 
 
 
-% coverage help run
+% coverage3 help run
 Usage: coverage run [options] <pyfile> [program options]
 
 Run a Python program, measuring code execution.
@@ -83,7 +83,7 @@ Options:
 
 
 
-% coverage help report
+% coverage3 help report
 Usage: coverage report [options] [modules]
 
 Report coverage statistics on modules.
@@ -105,7 +105,7 @@ Options:
 
 
 
-% coverage run --branch Coverage1.py
+% Coverage1.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -114,8 +114,17 @@ OK
 
 
 
-% coverage report -m
+% coverage3 run --branch Coverage1.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+
+
+% coverage3 report -m
 Name        Stmts   Miss Branch BrMiss  Cover   Missing
 -------------------------------------------------------
-Coverage1      16      5      4      3    60%   13-17, 27
+Coverage1      16      5      4      3    60%   15-19, 29
 """
