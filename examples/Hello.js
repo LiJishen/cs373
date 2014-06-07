@@ -4,6 +4,9 @@
 // Hello.js
 // --------
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript
+// http://www.jslint.com
+
 print("Nothing to be done.\n");
 
 /*
