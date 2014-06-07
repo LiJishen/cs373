@@ -6,7 +6,7 @@
 // -------------
 
 function assert (b) {
-	"use strict";
+    "use strict";
     if (!b) {
         throw "Assertion Error"; }}
 
