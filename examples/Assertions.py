@@ -29,9 +29,9 @@ print("Done.")
 """
 % Assertions.py
 Traceback (most recent call last):
-  File "./Assertions.py", line 21, in <module>
+  File "./Assertions.py", line 23, in <module>
     assert cycle_length( 1) == 1
-  File "./Assertions.py", line 16, in cycle_length
+  File "./Assertions.py", line 18, in cycle_length
     assert c > 0
 AssertionError
 
