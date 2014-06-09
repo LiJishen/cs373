@@ -8,10 +8,10 @@
 
 """
 To test the program:
-    % python-coverage run --branch TestCollatz.py
+    % coverage3 run --branch TestCollatz.py
 
 To obtain coverage of the test:
-    % python-coverage report -m
+    % coverage3 report -m
 """
 
 # -------
@@ -21,7 +21,7 @@ To obtain coverage of the test:
 from io       import StringIO
 from unittest import main, TestCase
 
-from Collatz1 import collatz_read, collatz_eval, collatz_print, collatz_solve
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve
 
 # -----------
 # TestCollatz
@@ -151,8 +151,8 @@ FAILED (failures=5)
 % coverage3 report -m
 Name           Stmts   Miss Branch BrMiss  Cover   Missing
 ----------------------------------------------------------
-Collatz1          18      0      6      0   100%
-TestCollatz1      33      1      0      0    97%   86
+Collatz          18      0      6      0   100%
+TestCollatz      33      1      0      0    97%   86
 ----------------------------------------------------------
-TOTAL             51      1      6      0    98%
+TOTAL            51      1      6      0    98%
 """

@@ -14,7 +14,7 @@ To obtain coverage of the run:
     % coverage3 report -m
 
 To document the program
-    % pydoc -w Collatz1
+    % pydoc -w Collatz
 """
 
 # -------
@@ -23,7 +23,7 @@ To document the program
 
 import sys
 
-from Collatz1 import collatz_solve
+from Collatz import collatz_solve
 
 # ----
 # main
@@ -32,15 +32,15 @@ from Collatz1 import collatz_solve
 collatz_solve(sys.stdin, sys.stdout)
 
 """
-% coverage3 run --branch RunCollatz.py < RunCollatz.in > RunCollatz1.out
+% coverage3 run --branch RunCollatz.py < RunCollatz.in > RunCollatz.out
 
 
 
 % coverage3 report -m
 Name          Stmts   Miss Branch BrMiss  Cover   Missing
 ---------------------------------------------------------
-Collatz1         18      0      6      0   100%
-RunCollatz1       5      0      0      0   100%
+Collatz         18      0      6      0   100%
+RunCollatz       5      0      0      0   100%
 ---------------------------------------------------------
-TOTAL            23      0      6      0   100%
+TOTAL           23      0      6      0   100%
 """
