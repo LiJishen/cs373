@@ -8,7 +8,7 @@
 
 """
 To test the program:
-    % python-coverage run --branch TestCollatz1.py
+    % python-coverage run --branch TestCollatz.py
 
 To obtain coverage of the test:
     % python-coverage report -m
@@ -84,13 +84,13 @@ class TestCollatz (TestCase) :
 main()
 
 """
-% coverage3 run --branch TestCollatz1.py
+% coverage3 run --branch TestCollatz.py
 FFFF..F
 ======================================================================
 FAIL: test_eval_1 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz1.py", line 47, in test_eval_1
+  File "TestCollatz.py", line 47, in test_eval_1
     self.assertEqual(v, 20)
 AssertionError: 1 != 20
 
@@ -98,7 +98,7 @@ AssertionError: 1 != 20
 FAIL: test_eval_2 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz1.py", line 51, in test_eval_2
+  File "TestCollatz.py", line 51, in test_eval_2
     self.assertEqual(v, 125)
 AssertionError: 1 != 125
 
@@ -106,7 +106,7 @@ AssertionError: 1 != 125
 FAIL: test_eval_3 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz1.py", line 55, in test_eval_3
+  File "TestCollatz.py", line 55, in test_eval_3
     self.assertEqual(v, 89)
 AssertionError: 1 != 89
 
@@ -114,7 +114,7 @@ AssertionError: 1 != 89
 FAIL: test_eval_4 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz1.py", line 59, in test_eval_4
+  File "TestCollatz.py", line 59, in test_eval_4
     self.assertEqual(v, 174)
 AssertionError: 1 != 174
 
@@ -122,7 +122,7 @@ AssertionError: 1 != 174
 FAIL: test_solve (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz1.py", line 78, in test_solve
+  File "TestCollatz.py", line 78, in test_solve
     self.assertEqual(w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
 AssertionError: '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n' != '1 10 20\n100 200 125\n201 210 89\n900 1000 174\n'
 - 1 10 1

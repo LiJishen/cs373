@@ -8,7 +8,7 @@
 
 """
 To run the program
-    % coverage3 run --branch RunCollatz1.py < RunCollatz.in
+    % coverage3 run --branch RunCollatz.py < RunCollatz.in
 
 To obtain coverage of the run:
     % coverage3 report -m
@@ -32,7 +32,7 @@ from Collatz1 import collatz_solve
 collatz_solve(sys.stdin, sys.stdout)
 
 """
-% coverage3 run --branch RunCollatz1.py < RunCollatz.in > RunCollatz1.out
+% coverage3 run --branch RunCollatz.py < RunCollatz.in > RunCollatz1.out
 
 
 
