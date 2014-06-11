@@ -1,4 +1,4 @@
-/*global print*/
+/*global println*/
 
 // --------
 // Hello.js
@@ -7,7 +7,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript
 // http://www.jslint.com
 
-print("Nothing to be done.\n");
+println("Nothing to be done.");
 
 /*
 Developed in 1995 by Brendan Eich, who cofounded Mozilla and recently resigned as CEO.

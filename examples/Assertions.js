@@ -1,5 +1,5 @@
-/*global print*/
 /*jslint plusplus: true, white: true*/
+/*global println*/
 
 // -------------
 // Assertions.js
@@ -23,13 +23,13 @@ function cycle_length (n) {
     assert(c > 0);
     return c;}
 
-print("Assertions.js\n");
+println("Assertions.js");
 
 assert(cycle_length( 1) === 1);
 assert(cycle_length( 5) === 6);
 assert(cycle_length(10) === 7);
 
-print("Done.\n");
+println("Done.");
 
 /*
 Assertions.js
