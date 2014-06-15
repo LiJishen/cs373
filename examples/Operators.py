@@ -44,24 +44,24 @@ i += j
 assert i == 5
 assert j == 3
 
-i = 10
-j =  5
-k = i / j      # true division
-assert i       == 10
-assert j       ==  5
+i = 4
+j = 2
+k = i / j               # true division
+assert i       == 4
+assert j       == 2
 assert type(k) is float
 assert str(k)  == "2.0"
 
-i = 10
-j =  5
+i =  4
+j =  2
 i /= j
 assert type(i) is float
 assert str(i ) == "2.0"
-assert j       == 5
+assert j       == 2
 
 i = 5
 j = 2
-k = i // j             # floor division
+k = i // j            # floor division
 assert i       == 5
 assert j       == 2
 assert type(k) is int
@@ -76,7 +76,7 @@ assert j == 2
 
 i = 4.0
 j = 2
-k = i // j             # floor division
+k = i // j              # floor division
 assert i       == 4.0
 assert j       == 2
 assert type(k) is float
@@ -91,7 +91,7 @@ assert j == 2
 
 i = 12
 j = 10
-k = i % j       # integer mod
+k = i % j      # integer mod
 assert i == 12
 assert j == 10
 assert k ==  2
