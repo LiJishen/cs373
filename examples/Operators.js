@@ -201,11 +201,13 @@ assert(u === "abc");
 a = [2, 3, 4];
 b = [2, 3, 4];
 c = [2, 2, 2];
+assert(a === a);
 assert(a !== b);
 assert(a !== c);
 function arrays_equals (x, y) {
 	"use strict";
 	return !(x < y) && !(x > y);}
+assert( arrays_equals(a, a));
 assert( arrays_equals(a, b));
 assert(!arrays_equals(a, c));
 

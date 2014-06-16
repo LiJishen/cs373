@@ -18,6 +18,9 @@ assert(Function instanceof Function);
 assert(Object   instanceof Function);
 assert(Function instanceof Object);
 
+assert(Object.getPrototypeOf(Function.prototype) === Object.prototype);
+assert(Object.getPrototypeOf(Object.prototype)   === null);
+
 var b = false;
 b = true;
 assert((typeof b) === "boolean");
@@ -27,24 +30,19 @@ assert(b       instanceof Boolean);
 assert(b       instanceof Object);
 assert(Boolean instanceof Function);
 assert(Boolean instanceof Object);
+assert(Object.getPrototypeOf(b)                 === Boolean.prototype);
+assert(Object.getPrototypeOf(Boolean.prototype) === Object.prototype);
 
-var i = 2;
-assert((typeof i) === "number");
-i = new Number(2);
-assert((typeof i) === "object");
-assert(i      instanceof Number);
-assert(i      instanceof Object);
+var n = 2.34;
+assert((typeof n) === "number");
+n = new Number(2);
+assert((typeof n) === "object");
+assert(n      instanceof Number);
+assert(n      instanceof Object);
 assert(Number instanceof Function);
 assert(Number instanceof Object);
-
-var f = 2.3;
-assert((typeof f) === "number");
-f = new Number(2.3);
-assert((typeof f) === "object");
-assert(f      instanceof Number);
-assert(f      instanceof Object);
-assert(Number instanceof Function);
-assert(Number instanceof Object);
+assert(Object.getPrototypeOf(n)                === Number.prototype);
+assert(Object.getPrototypeOf(Number.prototype) === Object.prototype);
 
 var s = "abc";
 assert((typeof s) === "string");
@@ -54,6 +52,8 @@ assert(s      instanceof String);
 assert(s      instanceof Object);
 assert(String instanceof Function);
 assert(String instanceof Object);
+assert(Object.getPrototypeOf(s)                === String.prototype);
+assert(Object.getPrototypeOf(String.prototype) === Object.prototype);
 
 var a = [2, 3, 4];
 assert((typeof a) === "object");
@@ -61,8 +61,10 @@ assert(a     instanceof Array);
 assert(a     instanceof Object);
 assert(Array instanceof Function);
 assert(Array instanceof Object);
+assert(Object.getPrototypeOf(a)               === Array.prototype);
+assert(Object.getPrototypeOf(Array.prototype) === Object.prototype);
 
-var x = {};
+var x = {n : 2.34, s : "abc", u : {v : [2, 3, 4]}};
 assert((typeof x) === "object");
 assert(x      instanceof Object);
 assert(Object instanceof Function);
