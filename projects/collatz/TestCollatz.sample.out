@@ -58,3 +58,12 @@ AssertionError: '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n' != '1 10 20\n100 20
 Ran 7 tests in 0.004s
 
 FAILED (failures=5)
+
+
+
+Name          Stmts   Miss Branch BrMiss  Cover   Missing
+---------------------------------------------------------
+Collatz          18      0      6      0   100%
+TestCollatz      33      1      0      0    97%   86
+---------------------------------------------------------
+TOTAL            51      1      6      0    98%
