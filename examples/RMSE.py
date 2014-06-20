@@ -117,29 +117,29 @@ print("Done.")
 
 """
 RMSE.py
-3.3.3 (default, Jan 19 2014, 10:13:09)
-[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)]
+3.2.3 (default, Feb 27 2014, 21:31:18)
+[GCC 4.6.3]
 
 rmse_while
-501.339 milliseconds
+700.000 milliseconds
 
 rmse_range_for
-497.844 milliseconds
+740.000 milliseconds
 
 rmse_zip_for
-423.167 milliseconds
+610.000 milliseconds
 
 rmse_zip_reduce
-545.354 milliseconds
+810.000 milliseconds
 
 rmse_map_sum
-430.414 milliseconds
+540.000 milliseconds
 
 rmse_zip_list_sum
-383.953 milliseconds
+590.000 milliseconds
 
 rmse_zip_gen_sum
-402.718 milliseconds
+630.000 milliseconds
 
 Done.
 """
