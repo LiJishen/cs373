@@ -78,16 +78,6 @@ def rmse_zip_list_sum (a, p) :
     v = sum([sqre_diff(x, y) for x, y in z])
     return math.sqrt(v / s)
 
-def rmse_zip_gen_sum (a, p) :
-    """
-    O(1) in space
-    O(n) in time
-    """
-    s = len(a)
-    z = zip(a, p)
-    v = sum((sqre_diff(x, y) for x, y in z))
-    return math.sqrt(v / s)
-
 def test (f) :
     print(f.__name__)
     assert str(f((2, 3, 4), (2, 3, 4))) == "0.0"
@@ -111,7 +101,6 @@ test(rmse_zip_for)
 test(rmse_zip_reduce)
 test(rmse_map_sum)
 test(rmse_zip_list_sum)
-test(rmse_zip_gen_sum)
 
 print("Done.")
 
@@ -137,9 +126,6 @@ rmse_map_sum
 
 rmse_zip_list_sum
 590.000 milliseconds
-
-rmse_zip_gen_sum
-630.000 milliseconds
 
 Done.
 """
