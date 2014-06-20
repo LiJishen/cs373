@@ -3,7 +3,7 @@ CS373: Quiz #5 (10 pts) <Mukund>
 --
 
 --------------------------------------------------------------------------
- 1. In Java Stack is a subclass of Vector.
+ 1. In Java, Stack is a subclass of Vector.
     What's wrong with that?
     What would be better?
     (6 pts)
@@ -19,4 +19,4 @@ containment
     (3 pts)
 --
 
-you change prototypes, you can't change inheritance at runtime
+you can change prototypes, you can't change inheritance at runtime
