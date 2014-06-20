@@ -4,8 +4,8 @@ CS373: Quiz #5 (10 pts) <Mukund>
 
 --------------------------------------------------------------------------
  1. In Java Stack is a subclass of Vector.
- 	What's wrong with that?
- 	What would be better?
+    What's wrong with that?
+    What would be better?
     (6 pts)
 --
 
@@ -14,8 +14,8 @@ containment
 
 --------------------------------------------------------------------------
  2. Java has delegation through inheritance.
- 	JavaScript has delegation through containment (prototypes).
- 	What's the advantage of JavaScript's way?
+    JavaScript has delegation through containment (prototypes).
+    What's the advantage of JavaScript's way?
     (3 pts)
 --
 
