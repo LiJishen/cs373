@@ -6,7 +6,7 @@
 // --------
 
 function assert (b) {
-	"use strict";
+    "use strict";
     if (!b) {
         throw "Assertion Error";}}
 
@@ -86,7 +86,7 @@ assert(y instanceof Object);
 assert(Object.getPrototypeOf(y) === x);
 
 function inc (v) {
-	"use strict";
+    "use strict";
     return v + 1;}
 assert((typeof inc) === "function");
 assert(inc      instanceof Function);

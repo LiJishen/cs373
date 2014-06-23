@@ -6,9 +6,13 @@
 // ------------
 
 function assert (b) {
-	"use strict";
+    "use strict";
     if (!b) {
         throw "Assertion Error";}}
+
+function arrays_equals (a, b) {
+    "use strict";
+    return !(a < b) && !(b < a);}
 
 println("Operators.js");
 
@@ -18,141 +22,141 @@ assert(i ===  2);
 assert(j === -2);
 //++-i;           // error: Invalid increment operand
 
-i = 2;
-j = ++i;         // pre-increment
+var i = 2;
+var j = ++i;         // pre-increment
 assert(i === 3);
 assert(j === 3);
 //++++i;         // error: Invalid increment operand
 
-i = 2;
-j = i++;         // post-increment
+var i = 2;
+var j = i++;         // post-increment
 assert(i === 3);
 assert(j === 2);
 //i++++;         // error: Invalid increment operand
 
-i = 2;
-j = 3;
+var i = 2;
+var j = 3;
 var k = (i = j);
 assert(i === 3);
 assert(j === 3);
 assert(k === 3);
 //++(i = j);     // error: Invalid increment operand
 
-i = 2;
-j = 3;
-k = i + j;       // addition
+var i = 2;
+var j = 3;
+var k = i + j;       // addition
 assert(i === 2);
 assert(j === 3);
 assert(k === 5);
 //++(i + j);     // error: Invalid increment operand
 
-i = 2;
-j = 3;
-k = (i += j);
+var i = 2;
+var j = 3;
+var k = (i += j);
 assert(i === 5);
 assert(j === 3);
 assert(k === 5);
 //++(i += j);    // error: Invalid increment operand
 
-i = 12;
-j = 10;
-k = i / j;          // division
+var i = 12;
+var j = 10;
+var k = i / j;          // division
 assert(i === 12);
 assert(j === 10);
 assert(k ===  1.2);
 //++(i / j);        // error: Invalid increment operand
 
-i = 12;
-j = 10;
-k = (i /= j);
+var i = 12;
+var j = 10;
+var k = (i /= j);
 assert(i ===  1.2);
 assert(j === 10);
 assert(k ===  1.2);
 //++(i /= j);       // error: Invalid increment operand
 
-i = 12;
-j = 10;
-k = i % j;        // mod
+var i = 12;
+var j = 10;
+var k = i % j;        // mod
 assert(i === 12);
 assert(j === 10);
 assert(k ===  2);
 //++(i % j);      // error: Invalid increment operand
 
-i = 12;
-j = 10;
-k = (i %= j);
+var i = 12;
+var j = 10;
+var k = (i %= j);
 assert(i ===  2);
 assert(j === 10);
 assert(k ===  2);
 //++(i %= j);     // error: Invalid increment operand
 
-i = 2;
-j = 3;
-k = i << j;       // bit shift left
+var i = 2;
+var j = 3;
+var k = i << j;       // bit shift left
 assert(i ===  2);
 assert(j ===  3);
 assert(k === 16);
 //++(i << j);     // error: Invalid increment operand
 
-i = 2;
-j = 3;
-k = (i <<= j);
+var i = 2;
+var j = 3;
+var k = (i <<= j);
 assert(i === 16);
 assert(j ===  3);
 assert(k === 16);
 //++(i <<= j);    // error: Invalid increment operand
 
-i = 10;            // 0000 0000 0000 1010
-j = ~i;            // 1111 1111 1111 0101: bit complement
-k = ~i + 1;        // 1111 1111 1111 0110
+var i = 10;            // 0000 0000 0000 1010
+var j = ~i;            // 1111 1111 1111 0101: bit complement
+var k = ~i + 1;        // 1111 1111 1111 0110
 assert(i ===  10);
 assert(j === -11);
 assert(k === -10);
 
-i = 10;           // 1010
-j = 12;           // 1100
-k = i & j;        // 1000: bit and
+var i = 10;           // 1010
+var j = 12;           // 1100
+var k = i & j;        // 1000: bit and
 assert(i === 10);
 assert(j === 12);
 assert(k ===  8);
 
-i = 10;
-j = 12;
-k = (i &= j);
+var i = 10;
+var j = 12;
+var k = (i &= j);
 assert(i ===  8);
 assert(j === 12);
 assert(k ===  8);
 
-i = 10;           // 1010
-j = 12;           // 1100
-k = i | j;        // 1110: bit or
+var i = 10;           // 1010
+var j = 12;           // 1100
+var k = i | j;        // 1110: bit or
 assert(i === 10);
 assert(j === 12);
 assert(k === 14);
 
-i = 10;
-j = 12;
-k = (i |= j);
+var i = 10;
+var j = 12;
+var k = (i |= j);
 assert(i === 14);
 assert(j === 12);
 assert(k === 14);
 
-i = 10;           // 1010
-j = 12;           // 1100
-k = i ^ j;        // 0110: bit exclusive or
+var i = 10;           // 1010
+var j = 12;           // 1100
+var k = i ^ j;        // 0110: bit exclusive or
 assert(i === 10);
 assert(j === 12);
 assert(k ===  6);
 
-i = 10;
-j = 12;
-k = (i ^= j);
+var i = 10;
+var j = 12;
+var k = (i ^= j);
 assert(i ===  6);
 assert(j === 12);
 assert(k ===  6);
 
-i = 10;          // 1010
-j = 12;          // 1100
+var i = 10;          // 1010
+var j = 12;          // 1100
 i ^= j;
 assert(i ===  6); // 0110
 assert(j === 12); // 1100
@@ -163,8 +167,8 @@ i ^= j;
 assert(i === 12); // 1100
 assert(j === 10); // 1010
 
-i = 10;
-j = 12;
+var i = 10;
+var j = 12;
 i += j;
 assert(i === 22);
 assert(j === 12);
@@ -185,7 +189,7 @@ assert(a || c);
 assert(a && b);
 assert(!(a && c));
 
-a = [2, 3, 4];
+var a = [2, 3, 4];
 assert(a[1] === 3); // array index
 ++a[1];
 assert(a[1] === 4);
@@ -198,22 +202,19 @@ var t = "bc";
 var u = s + t;       // string concatenation
 assert(u === "abc");
 
-a = [2, 3, 4];
-b = [2, 3, 4];
-c = [2, 2, 2];
+var a = [2, 3, 4];
+var b = [2, 3, 4];
+var c = [2, 2, 2];
 assert(a === a);
 assert(a !== b);
 assert(a !== c);
-function arrays_equals (x, y) {
-	"use strict";
-	return !(x < y) && !(x > y);}
 assert( arrays_equals(a, a));
 assert( arrays_equals(a, b));
 assert(!arrays_equals(a, c));
 
-a = [2];
-b = [3, 4];
-c = a.concat(b);                     // array concatenation
+var a = [2];
+var b = [3, 4];
+var c = a.concat(b);                     // array concatenation
 assert(arrays_equals(c, [2, 3, 4]));
 
 println("Done.");

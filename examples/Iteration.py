@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# ------------
-# Iteration.py
-# ------------
+# -------------
+# Indexables.py
+# -------------
 
 from itertools import count
 from types     import GeneratorType
@@ -35,6 +35,12 @@ for v in a :
     v += (5,)                  # ?
 assert a == [(2,), (3,), (4,)]
 
+a = [[2, "abc"], [3, "def"], [4, "ghi"]]
+s = 0
+for u, v in a :
+    s += u
+assert s == 9
+
 a = [(2, "abc"), (3, "def"), (4, "ghi")]
 s = 0
 for u, v in a :
@@ -46,6 +52,12 @@ s = 0
 for k in d :
     s += k
 assert s == 9
+
+d = {2 : "abc", 3 : "def", 4 : "ghi"}
+s = ""
+for k in d :
+    s += d[k]
+assert s == "abcdefghi"
 
 d = {2 : "abc", 3 : "def", 4 : "ghi"}
 s = 0

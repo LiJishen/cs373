@@ -6,12 +6,12 @@
 // -------------
 
 function assert (b) {
-	"use strict";
+    "use strict";
     if (!b) {
         throw "Assertion Error";}}
 
 function f (b) {
-	"use strict";
+    "use strict";
     if (b) {
         throw "abc";}
     return 0;}
@@ -27,7 +27,7 @@ try {
     assert(f(true) === 1);
     assert(false);}
 catch (e) {
-	assert((typeof e) === "string");
+    assert((typeof e) === "string");
     assert(e          === "abc");}
 
 print("Done.\n");

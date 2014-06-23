@@ -11,7 +11,7 @@ function assert (b) {
         throw "Assertion Error"; }}
 
 function cycle_length (n) {
-	"use strict";
+    "use strict";
     assert(n > 0);
     var c = 0;
     while (n > 1) {
