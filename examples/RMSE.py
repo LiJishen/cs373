@@ -17,9 +17,11 @@ def rmse_while (a, p) :
     O(1) in space
     O(n) in time
     """
-    assert(len(a) == len(p))
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
     assert(hasattr(a, "__getitem__"))
     assert(hasattr(p, "__getitem__"))
+    assert(len(a) == len(p))
     s = len(a)
     i = 0
     v = 0
@@ -33,9 +35,11 @@ def rmse_range_for (a, p) :
     O(1) in space
     O(n) in time
     """
-    assert(len(a) == len(p))
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
     assert(hasattr(a, "__getitem__"))
     assert(hasattr(p, "__getitem__"))
+    assert(len(a) == len(p))
     s = len(a)
     v = 0
     for i in range(s) :
@@ -47,9 +51,11 @@ def rmse_zip_for (a, p) :
     O(1) in space
     O(n) in time
     """
-    assert(len(a) == len(p))
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
     assert(hasattr(a, "__iter__"))
     assert(hasattr(p, "__iter__"))
+    assert(len(a) == len(p))
     s = len(a)
     z = zip(a, p)
     v = 0
@@ -62,9 +68,11 @@ def rmse_zip_reduce (a, p) :
     O(1) in space
     O(n) in time
     """
-    assert(len(a) == len(p))
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
     assert(hasattr(a, "__iter__"))
     assert(hasattr(p, "__iter__"))
+    assert(len(a) == len(p))
     s = len(a)
     z = zip(a, p)
     v = reduce(lambda v, a : v + sqre_diff(a[0], a[1]), z, 0)
@@ -75,9 +83,11 @@ def rmse_map_sum (a, p) :
     O(1) in space
     O(n) in time
     """
-    assert(len(a) == len(p))
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
     assert(hasattr(a, "__iter__"))
     assert(hasattr(p, "__iter__"))
+    assert(len(a) == len(p))
     s = len(a)
     v = sum(map(sqre_diff, a, p))
     return sqrt(v / s)
@@ -87,12 +97,29 @@ def rmse_zip_list_sum (a, p) :
     O(n) in space
     O(n) in time
     """
-    assert(len(a) == len(p))
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
     assert(hasattr(a, "__iter__"))
     assert(hasattr(p, "__iter__"))
+    assert(len(a) == len(p))
     s = len(a)
     z = zip(a, p)
     v = sum([sqre_diff(x, y) for x, y in z])
+    return sqrt(v / s)
+
+def rmse_zip_generator_sum (a, p) :
+    """
+    O(1) in space
+    O(n) in time
+    """
+    assert(hasattr(a, "__len__"))
+    assert(hasattr(p, "__len__"))
+    assert(hasattr(a, "__iter__"))
+    assert(hasattr(p, "__iter__"))
+    assert(len(a) == len(p))
+    s = len(a)
+    z = zip(a, p)
+    v = sum((sqre_diff(x, y) for x, y in z))
     return sqrt(v / s)
 
 def test (f) :
@@ -104,7 +131,7 @@ def test (f) :
     a = 1000000 * [1]
     p = 1000000 * [5]
     b = clock()
-    assert str(f(a, p)) == "4.0"
+    assert f(a, p) == 4
     e = clock()
     print("%5.3f" % ((e - b) * 1000), "milliseconds")
     print()
@@ -119,6 +146,7 @@ test(rmse_zip_for)
 test(rmse_zip_reduce)
 test(rmse_map_sum)
 test(rmse_zip_list_sum)
+test(rmse_zip_generator_sum)
 
 print("Done.")
 
@@ -128,22 +156,25 @@ RMSE.py
 [GCC 4.6.3]
 
 rmse_while
-690.000 milliseconds
+700.000 milliseconds
 
 rmse_range_for
-620.000 milliseconds
+630.000 milliseconds
 
 rmse_zip_for
 580.000 milliseconds
 
 rmse_zip_reduce
-730.000 milliseconds
+740.000 milliseconds
 
 rmse_map_sum
 540.000 milliseconds
 
 rmse_zip_list_sum
-580.000 milliseconds
+590.000 milliseconds
+
+rmse_zip_generator_sum
+590.000 milliseconds
 
 Done.
 """
