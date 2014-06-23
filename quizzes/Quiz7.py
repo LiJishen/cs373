@@ -9,7 +9,7 @@ from operator  import add, sub
 
 """ ----------------------------------------------------------------------
  1. What is the output of the following?
-    (3 pts)
+    (9 pts)
 
 3 pts: [5, 7, 9]
 3 pts: -4
