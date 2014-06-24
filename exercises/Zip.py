@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
-# ------
-# Zip.py
-# ------
+"""
+CS373: Exercise #3
+"""
+
+""" ----------------------------------------------------------------------
+Define the function my_zip() such it behaves as follows:
+"""
 
 def my_zip (a, b) :
     return list(map(lambda x, y : (x, y), a, b))

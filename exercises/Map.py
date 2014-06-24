@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
-# ------
-# Map.py
-# ------
+"""
+CS373: Exercise #2
+"""
+
+""" ----------------------------------------------------------------------
+Define the function my_map() such it behaves as follows:
+"""
 
 from math import sqrt
 
