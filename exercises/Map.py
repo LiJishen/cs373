@@ -13,4 +13,8 @@ from math import sqrt
 def my_map (uf, a) :
     return [uf(v) for v in a]
 
+print("Map.py")
+
 assert my_map(sqrt, [4, 9, 16]) == [2, 3, 4]
+
+print("Done.")
