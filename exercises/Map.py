@@ -4,6 +4,8 @@
 CS373: Exercise #2
 """
 
+# https://docs.python.org/3.4/library/functions.html#map
+
 """ ----------------------------------------------------------------------
 Define the function my_map() such it behaves as follows:
 """
@@ -15,6 +17,7 @@ def my_map (uf, a) :
 
 print("Map.py")
 
-assert my_map(sqrt, [4, 9, 16]) == [2, 3, 4]
+assert   my_map(sqrt, [4, 9, 16])  == [2, 3, 4]
+assert list(map(sqrt, [4, 9, 16])) == [2, 3, 4]
 
 print("Done.")
