@@ -4,11 +4,11 @@
 CS373: Exercise #3
 """
 
-# https://docs.python.org/3.4/library/functions.html#zip
-
 """ ----------------------------------------------------------------------
 Define the function my_zip() such it behaves as follows:
 """
+
+# https://docs.python.org/3.4/library/functions.html#zip
 
 def my_zip (a, b) :
     return list(map(lambda x, y : (x, y), a, b))

@@ -4,11 +4,11 @@
 CS373: Exercise #2
 """
 
-# https://docs.python.org/3.4/library/functions.html#map
-
 """ ----------------------------------------------------------------------
 Define the function my_map() such it behaves as follows:
 """
+
+# https://docs.python.org/3.4/library/functions.html#map
 
 from math import sqrt
 
