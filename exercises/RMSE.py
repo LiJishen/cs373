@@ -5,7 +5,7 @@ CS373: Exercise #1
 """
 
 """ ----------------------------------------------------------------------
-Define the function rmse() such it behaves as follows:
+Define the function rmse(), such that it behaves as follows:
 """
 
 from functools import reduce

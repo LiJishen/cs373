@@ -5,7 +5,7 @@ CS373: Exercise #4
 """
 
 """ ----------------------------------------------------------------------
-Define the function my_reduce_1() and my_reduce_2() such that it behaves
+Define the function my_reduce_1() and my_reduce_2(), such that it behaves
 as follows:
 """
 

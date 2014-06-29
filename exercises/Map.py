@@ -5,7 +5,7 @@ CS373: Exercise #2
 """
 
 """ ----------------------------------------------------------------------
-Define the function my_map() such it behaves as follows:
+Define the function my_map(), such that it behaves as follows:
 """
 
 # https://docs.python.org/3.4/library/functions.html#map
